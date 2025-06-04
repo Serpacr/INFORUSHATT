@@ -20,5 +20,4 @@ public class AuthController {
         return "Usuário registrado com sucesso!";
     }
 
-    // O login será tratado pelo Spring Security
 }
