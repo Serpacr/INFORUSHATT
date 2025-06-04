@@ -1,6 +1,7 @@
 package com.inforush.service;
 
-import com.inforush.model.*;
+import com.inforush.model.Conteudo;
+import com.inforush.model.Area;
 import com.inforush.repository.ConteudoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -28,4 +29,8 @@ public class ConteudoService {
     public Conteudo salvar(Conteudo conteudo) {
         return conteudoRepository.save(conteudo);
     }
+    public void deletarPorId(Long id) {
+        conteudoRepository.deleteById(id);
+    }
 }
+
