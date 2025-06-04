@@ -24,5 +24,4 @@ public class Conteudo {
     @Enumerated(EnumType.STRING)
     private Area area;
 
-    // outros campos que julgar necessários
 }
