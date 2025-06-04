@@ -1,6 +1,7 @@
 package com.inforush.controller;
 
-import com.inforush.model.*;
+import com.inforush.model.Conteudo;
+import com.inforush.model.Area;
 import com.inforush.service.ConteudoService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -35,4 +36,10 @@ public class ConteudoController {
     public Conteudo criar(@RequestBody @Valid Conteudo conteudo) {
         return conteudoService.salvar(conteudo);
     }
+
+    @DeleteMapping("/{id}")
+    public void deletarConteudo(@PathVariable Long id) {
+        conteudoService.deletarPorId(id);
+    }
+
 }
